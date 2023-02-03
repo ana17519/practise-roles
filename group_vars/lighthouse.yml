@@ -1,0 +1,3 @@
+lighthouse_url: "https://github.com/VKCOM/lighthouse.git"
+lighhouse_location_dir: "/home/ana/lighthouse"
+lighthouse_nginx_user: "root"
