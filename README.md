@@ -72,7 +72,6 @@ remote_user для коннекта: `remote_user: ana`
 | `Lighthouse`         | `Copy from git`        | Сканчивание модуля по url с использованием git и установка в место, указанное в dest |
 | `Lighthouse`         | `Create lighthouse config` | Создание конфига на основе шаблона `lighthouse.conf.j2`                             |
 
-
 Play `Install Clickhouse` применяется на группу `clickhouse` и предназначен для установки и запуска `Clickhouse`.
 
 remote_user для коннекта: `remote_user: ana`
@@ -105,6 +104,7 @@ remote_user для коннекта: `remote_user: ana`
  | `Vector` | ` Template config`    | Применяется шаблон конфига vector, задается путь конфига, владелец - ansible, затем запуск валидации конфига                                                                                       |
  | `Vector` | `Create systemd unit`      | Изменяется модуль службы vector |
 | `Vector` |  `Start service` | запуск  сервиса `Start Vector service`                                                                           |
+
 
 
 **Templates**
