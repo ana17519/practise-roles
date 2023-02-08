@@ -1,0 +1,16 @@
+---
+- name: Install Lighthouse
+  hosts: lighthouse
+  remote_user: ana
+  roles:
+    - lighthouse-role
+- name: Install Clickhouse
+  hosts: clickhouse
+  remote_user: ana
+  roles:
+   - clickhouse
+- name: Install Vector
+  hosts: vector
+  remote_user: ana
+  roles:
+     - vector-role

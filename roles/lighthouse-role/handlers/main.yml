@@ -1,0 +1,9 @@
+---
+- name: Start nginx
+  become: true
+  ansible.builtin.command: nginx
+- name: Reload nginx
+  become: true
+  ansible.builtin.service:
+    name: nginx
+    state: restarted
