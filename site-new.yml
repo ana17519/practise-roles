@@ -8,9 +8,9 @@
   hosts: clickhouse
   remote_user: ana
   roles:
-   - clickhouse
+    - clickhouse
 - name: Install Vector
   hosts: vector
   remote_user: ana
   roles:
-     - vector-role
+    - vector-role

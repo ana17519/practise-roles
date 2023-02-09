@@ -1,5 +1,5 @@
 ---
-- name: Start nginx
+- name: StQart nginx
   become: true
   ansible.builtin.command: nginx
 - name: Reload nginx
@@ -7,3 +7,8 @@
   ansible.builtin.service:
     name: nginx
     state: restarted
+- name: Start nginx
+  become: true
+  service:
+      name: nginx
+      state: started
