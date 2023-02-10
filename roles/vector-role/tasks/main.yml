@@ -1,0 +1,29 @@
+---
+- name: Vector | Install rpm
+  become: true
+  ansible.builtin.yum:
+    name: "{{ vector_url}}"
+    state: present
+- name: Vector | Template config
+  become: true
+  ansible.builtin.template:
+    src: vector.yml.j2
+    dest: "{{ vector_config_dir }}/vector.yml"
+    mode: "0644"
+    owner: "{{ ansible_user_id }}"
+    group: "{{ ansible_user_gid }}"
+    validate: vector validate --no-environment --config-yaml %s
+- name: Vector | Create systemd unit
+  become: true
+  ansible.builtin.template:
+    src: vector.service.j2
+    dest: /etc/systemd/system/vector.service
+    mode: "0644"
+    owner: "{{ ansible_user_id }}"
+    group: "{{ ansible_user_gid }}"
+- name: Vector | Start service
+  become: true
+  ansible.builtin.systemd:
+    name: vector
+    state: started
+    daemon_reload: true

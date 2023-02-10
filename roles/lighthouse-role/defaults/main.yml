@@ -1,3 +1,4 @@
-lighthouse_url: "https://github.com/VKCOM/lighthouse.git"
+---
+# defaults file for lighthouse-role
 lighhouse_location_dir: "/home/ana/lighthouse"
 lighthouse_nginx_user: "root"
