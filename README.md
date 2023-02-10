@@ -117,4 +117,5 @@ remote_user для коннекта: `remote_user: ana`
 
 Шаблон `nginx.conf.j2` используется для первичной настройки nginx, задается пользователь для nginx.
 
+
 Шаблон `lighthouse.conf.j2` настраивает nginx на работу с lighthouse. В нем указывается порт 80, root директорию и index страницу.
